@@ -1,10 +1,10 @@
 package parser
 
 import (
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/cftypes"
-	"github.com/aquasecurity/defsec/pkg/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/cftypes"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
 	"testing"
 )

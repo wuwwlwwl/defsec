@@ -3,9 +3,9 @@ package formatters
 import (
 	"encoding/xml"
 
-	"github.com/aquasecurity/defsec/pkg/severity"
+	"github.com/wuwwlwwl/defsec/pkg/severity"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 )
 
 type checkstyleResult struct {

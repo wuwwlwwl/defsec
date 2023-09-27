@@ -1,16 +1,16 @@
 package google
 
 import (
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/bigquery"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/compute"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/dns"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/gke"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/iam"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/kms"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/sql"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/storage"
-	"github.com/aquasecurity/defsec/pkg/providers/google"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google/bigquery"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google/compute"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google/dns"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google/gke"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google/iam"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google/kms"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google/sql"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google/storage"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 )
 
 func Adapt(modules terraform.Modules) google.Google {

@@ -1,9 +1,9 @@
 package apigateway
 
 import (
-	v2 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v2"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
-	"github.com/aquasecurity/defsec/pkg/types"
+	v2 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v2"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func getApis(cfFile parser.FileContext) (apis []v2.API) {

@@ -1,10 +1,10 @@
 package apigateway
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/apigateway"
-	v1 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v1"
-	v2 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v2"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway"
+	v1 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v1"
+	v2 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v2"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
 )
 
 // Adapt ...

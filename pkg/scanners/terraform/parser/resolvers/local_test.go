@@ -5,8 +5,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
 	"github.com/stretchr/testify/assert"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 )
 
 func Test_ResolveRecursiveSource(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"io/fs"
 	"strings"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
 	"github.com/liamg/jfather"
 	"gopkg.in/yaml.v3"

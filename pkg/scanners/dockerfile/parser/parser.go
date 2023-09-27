@@ -8,13 +8,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 
-	"github.com/aquasecurity/defsec/pkg/detection"
-	"github.com/aquasecurity/defsec/pkg/providers/dockerfile"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
 	"github.com/moby/buildkit/frontend/dockerfile/instructions"
 	"github.com/moby/buildkit/frontend/dockerfile/parser"
+	"github.com/wuwwlwwl/defsec/pkg/detection"
+	"github.com/wuwwlwwl/defsec/pkg/providers/dockerfile"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 )
 
 var _ options.ConfigurableParser = (*Parser)(nil)

@@ -7,12 +7,12 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 
-	tfcontext "github.com/aquasecurity/defsec/pkg/scanners/terraform/context"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	tfcontext "github.com/wuwwlwwl/defsec/pkg/scanners/terraform/context"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 
 	"github.com/hashicorp/hcl/v2"
 	"github.com/hashicorp/hcl/v2/ext/typeexpr"

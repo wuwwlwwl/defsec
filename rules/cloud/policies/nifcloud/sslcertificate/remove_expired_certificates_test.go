@@ -4,11 +4,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/aquasecurity/defsec/pkg/providers/nifcloud/sslcertificate"
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/state"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
 	"github.com/stretchr/testify/assert"
+	"github.com/wuwwlwwl/defsec/pkg/providers/nifcloud/sslcertificate"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/state"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func TestCheckRemoveExpiredCertificates(t *testing.T) {

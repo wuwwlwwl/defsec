@@ -1,6 +1,6 @@
 package parser
 
-import "github.com/aquasecurity/defsec/pkg/scanners/cloudformation/cftypes"
+import "github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/cftypes"
 
 func ResolveLength(property *Property) (*Property, bool) {
 	if !property.isFunction() {

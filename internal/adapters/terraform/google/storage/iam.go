@@ -1,8 +1,8 @@
 package storage
 
 import (
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google/iam"
-	iamTypes "github.com/aquasecurity/defsec/pkg/providers/google/iam"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google/iam"
+	iamTypes "github.com/wuwwlwwl/defsec/pkg/providers/google/iam"
 )
 
 type parentedBinding struct {

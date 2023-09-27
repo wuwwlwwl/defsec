@@ -6,15 +6,15 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure/resolver"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure/resolver"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
 	"github.com/stretchr/testify/assert"
 
 	"github.com/liamg/memoryfs"
 
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
 	"github.com/stretchr/testify/require"
 )

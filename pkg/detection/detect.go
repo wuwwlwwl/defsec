@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/azure/arm/parser/armjson"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure/arm/parser/armjson"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 	"gopkg.in/yaml.v3"
 )
 

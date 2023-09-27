@@ -3,13 +3,13 @@ package sqs
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/iam"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/sqs"
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/iam"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/sqs"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 
 	"github.com/liamg/iamgo"
 

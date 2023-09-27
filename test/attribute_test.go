@@ -3,8 +3,8 @@ package test
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/terraform"
 	"github.com/stretchr/testify/assert"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 )
 
 func Test_AttributeStartsWith(t *testing.T) {

@@ -1,8 +1,8 @@
 package dns
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/nifcloud/dns"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/providers/nifcloud/dns"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 )
 
 func adaptRecords(modules terraform.Modules) []dns.Record {

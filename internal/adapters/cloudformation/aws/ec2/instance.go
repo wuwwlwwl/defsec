@@ -1,9 +1,9 @@
 package ec2
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/ec2"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/ec2"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func getInstances(ctx parser.FileContext) (instances []ec2.Instance) {

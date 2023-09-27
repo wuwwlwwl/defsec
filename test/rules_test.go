@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/aquasecurity/defsec/internal/rules"
-	"github.com/aquasecurity/defsec/pkg/framework"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
-	"github.com/aquasecurity/defsec/test/testutil"
+	"github.com/wuwwlwwl/defsec/internal/rules"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func TestAVDIDs(t *testing.T) {

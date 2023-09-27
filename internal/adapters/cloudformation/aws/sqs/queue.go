@@ -3,12 +3,12 @@ package sqs
 import (
 	"fmt"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/iam"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/sqs"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/iam"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/sqs"
 
 	"github.com/liamg/iamgo"
 )

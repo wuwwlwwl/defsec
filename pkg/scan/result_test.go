@@ -3,9 +3,9 @@ package scan_test
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/types"
 	"github.com/stretchr/testify/assert"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func Test_Occurrences(t *testing.T) {

@@ -1,8 +1,8 @@
 package rdb
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/nifcloud/rdb"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/providers/nifcloud/rdb"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 )
 
 func adaptDBInstances(modules terraform.Modules) []rdb.DBInstance {

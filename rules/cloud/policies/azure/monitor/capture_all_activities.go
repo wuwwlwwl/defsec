@@ -3,16 +3,16 @@ package monitor
 import (
 	"fmt"
 
-	"github.com/aquasecurity/defsec/pkg/severity"
+	"github.com/wuwwlwwl/defsec/pkg/severity"
 
-	"github.com/aquasecurity/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 
-	"github.com/aquasecurity/defsec/internal/rules"
+	"github.com/wuwwlwwl/defsec/internal/rules"
 
-	"github.com/aquasecurity/defsec/pkg/providers"
-	"github.com/aquasecurity/defsec/pkg/providers/azure/monitor"
+	"github.com/wuwwlwwl/defsec/pkg/providers"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/monitor"
 )
 
 var CheckCaptureAllActivities = rules.Register(

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
 	"github.com/stretchr/testify/assert"
 

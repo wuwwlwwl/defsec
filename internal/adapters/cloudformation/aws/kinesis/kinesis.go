@@ -1,8 +1,8 @@
 package kinesis
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/kinesis"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/kinesis"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
 )
 
 // Adapt ...

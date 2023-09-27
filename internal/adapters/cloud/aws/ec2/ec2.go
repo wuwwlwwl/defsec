@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
 	"github.com/aws/aws-sdk-go-v2/aws"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	aws2 "github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/ec2"
-	"github.com/aquasecurity/defsec/pkg/state"
 	ec2api "github.com/aws/aws-sdk-go-v2/service/ec2"
 	ec2Types "github.com/aws/aws-sdk-go-v2/service/ec2/types"
+	aws2 "github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/ec2"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 )
 
 type adapter struct {

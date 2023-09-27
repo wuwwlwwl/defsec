@@ -1,17 +1,17 @@
 package ec2
 
 import (
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/aws/test"
-	"github.com/aquasecurity/defsec/pkg/state"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	ec2api "github.com/aws/aws-sdk-go-v2/service/ec2"
 	ec2Types "github.com/aws/aws-sdk-go-v2/service/ec2/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws/test"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 
 	"testing"
 
-	aws2 "github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
+	aws2 "github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
 )
 
 type volumeDetails struct {

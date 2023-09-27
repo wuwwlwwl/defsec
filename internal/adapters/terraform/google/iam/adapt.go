@@ -1,10 +1,10 @@
 package iam
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/google/iam"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	"github.com/aquasecurity/defsec/pkg/types"
 	"github.com/google/uuid"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/iam"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func Adapt(modules terraform.Modules) iam.IAM {

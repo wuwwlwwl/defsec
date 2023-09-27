@@ -3,8 +3,8 @@ package parser
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/cftypes"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/cftypes"
 )
 
 func Test_GetProperty_PropIsFunction(t *testing.T) {

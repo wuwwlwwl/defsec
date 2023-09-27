@@ -3,14 +3,14 @@ package lambda
 import (
 	"testing"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/lambda"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/lambda"
 
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/tftestutil"
-	"github.com/aquasecurity/defsec/test/testutil"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/tftestutil"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func Test_Adapt(t *testing.T) {

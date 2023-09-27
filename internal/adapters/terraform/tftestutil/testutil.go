@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/parser"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/parser"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 
-	"github.com/aquasecurity/defsec/test/testutil"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func CreateModulesFromSource(t *testing.T, source string, ext string) terraform.Modules {

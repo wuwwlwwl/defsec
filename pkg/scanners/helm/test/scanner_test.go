@@ -8,12 +8,12 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/helm"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/helm"
 )
 
 func Test_helm_scanner_with_archive(t *testing.T) {

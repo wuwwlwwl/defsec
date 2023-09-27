@@ -1,9 +1,9 @@
 package msk
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/msk"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/msk"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func Adapt(modules terraform.Modules) msk.MSK {

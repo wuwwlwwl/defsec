@@ -3,8 +3,8 @@ package azure
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/types"
 	"github.com/stretchr/testify/assert"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func Test_ValueAsInt(t *testing.T) {

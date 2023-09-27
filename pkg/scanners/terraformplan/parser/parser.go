@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/terraform"
 	"github.com/liamg/memoryfs"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 )
 
 type Parser struct {

@@ -3,11 +3,11 @@ package rego
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/internal/rules"
-	rules2 "github.com/aquasecurity/defsec/rules"
 	"github.com/open-policy-agent/opa/ast"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/internal/rules"
+	rules2 "github.com/wuwwlwwl/defsec/rules"
 )
 
 func Test_EmbeddedLoading(t *testing.T) {

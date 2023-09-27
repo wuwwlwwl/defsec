@@ -11,12 +11,12 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 
 	"gopkg.in/yaml.v3"
 
-	"github.com/aquasecurity/defsec/pkg/detection"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/detection"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 )
 
 var _ options.ConfigurableParser = (*Parser)(nil)

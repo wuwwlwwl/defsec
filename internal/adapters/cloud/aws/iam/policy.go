@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
 	"github.com/liamg/iamgo"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/iam"
-	"github.com/aquasecurity/defsec/pkg/state"
 	iamapi "github.com/aws/aws-sdk-go-v2/service/iam"
 	iamtypes "github.com/aws/aws-sdk-go-v2/service/iam/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/iam"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 )
 
 func (a *adapter) adaptPolicies(state *state.State) error {

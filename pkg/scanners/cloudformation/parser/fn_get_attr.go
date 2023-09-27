@@ -3,7 +3,7 @@ package parser
 import (
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/cftypes"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/cftypes"
 )
 
 func ResolveGetAtt(property *Property) (resolved *Property, success bool) {

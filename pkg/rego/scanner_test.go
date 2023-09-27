@@ -7,13 +7,13 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
-	"github.com/aquasecurity/defsec/pkg/severity"
+	"github.com/wuwwlwwl/defsec/pkg/severity"
 
-	"github.com/aquasecurity/defsec/test/testutil"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 
 	"github.com/stretchr/testify/assert"
 

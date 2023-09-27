@@ -1,8 +1,8 @@
 package ecs
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/ecs"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/ecs"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
 )
 
 // Adapt ...

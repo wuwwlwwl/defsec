@@ -4,20 +4,20 @@ import (
 	"context"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/parser"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/parser"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 
-	"github.com/aquasecurity/defsec/pkg/severity"
+	"github.com/wuwwlwwl/defsec/pkg/severity"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 
-	"github.com/aquasecurity/defsec/internal/rules"
+	"github.com/wuwwlwwl/defsec/internal/rules"
 
-	"github.com/aquasecurity/defsec/pkg/providers"
+	"github.com/wuwwlwwl/defsec/pkg/providers"
 
-	"github.com/aquasecurity/defsec/test/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 var panicRule = scan.Rule{

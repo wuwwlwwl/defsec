@@ -1,6 +1,6 @@
 package network
 
-import defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+import defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
 type Network struct {
 	ElasticLoadBalancers []ElasticLoadBalancer

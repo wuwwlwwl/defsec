@@ -1,9 +1,9 @@
 package aws
 
 import (
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	"github.com/aquasecurity/defsec/pkg/progress"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	"github.com/wuwwlwwl/defsec/pkg/progress"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 )
 
 type ConfigurableAWSScanner interface {

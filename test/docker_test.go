@@ -12,10 +12,10 @@ import (
 	"github.com/liamg/memoryfs"
 	"github.com/open-policy-agent/opa/bundle"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/scanners/dockerfile"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/dockerfile"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -3,15 +3,15 @@ package lambda
 import (
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/lambda"
-	"github.com/aquasecurity/defsec/pkg/state"
 	lambdaapi "github.com/aws/aws-sdk-go-v2/service/lambda"
 	"github.com/aws/aws-sdk-go-v2/service/lambda/types"
 	"github.com/liamg/iamgo"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/lambda"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 )
 
 type adapter struct {

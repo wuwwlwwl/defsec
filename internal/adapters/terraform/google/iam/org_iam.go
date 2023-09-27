@@ -1,9 +1,9 @@
 package iam
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/google/iam"
-	"github.com/aquasecurity/defsec/pkg/types"
 	"github.com/google/uuid"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/iam"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 // see https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_organization_iam

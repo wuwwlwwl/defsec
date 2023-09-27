@@ -1,6 +1,6 @@
 package armjson
 
-import "github.com/aquasecurity/defsec/pkg/types"
+import "github.com/wuwwlwwl/defsec/pkg/types"
 
 type Node interface {
 	Comments() []Node

@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/aquasecurity/defsec/pkg/types"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 //go:embed all:testdata/policies

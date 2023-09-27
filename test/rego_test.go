@@ -9,14 +9,14 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/rego/schemas"
+	"github.com/wuwwlwwl/defsec/pkg/rego/schemas"
 
 	"github.com/stretchr/testify/assert"
 
-	dr "github.com/aquasecurity/defsec/pkg/rego"
 	"github.com/open-policy-agent/opa/ast"
 	"github.com/open-policy-agent/opa/rego"
 	"github.com/stretchr/testify/require"
+	dr "github.com/wuwwlwwl/defsec/pkg/rego"
 )
 
 func Test_AllRegoCloudRulesMatchSchema(t *testing.T) {

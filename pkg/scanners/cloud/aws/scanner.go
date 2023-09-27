@@ -10,24 +10,24 @@ import (
 	"runtime"
 	"sync"
 
-	adapter "github.com/aquasecurity/defsec/internal/adapters/cloud"
-	cloudoptions "github.com/aquasecurity/defsec/internal/adapters/cloud/options"
-	"github.com/aquasecurity/defsec/pkg/errs"
+	adapter "github.com/wuwwlwwl/defsec/internal/adapters/cloud"
+	cloudoptions "github.com/wuwwlwwl/defsec/internal/adapters/cloud/options"
+	"github.com/wuwwlwwl/defsec/pkg/errs"
 
-	"github.com/aquasecurity/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 
-	"github.com/aquasecurity/defsec/pkg/rego"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/rego"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
-	"github.com/aquasecurity/defsec/internal/rules"
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	"github.com/aquasecurity/defsec/pkg/debug"
-	"github.com/aquasecurity/defsec/pkg/framework"
-	"github.com/aquasecurity/defsec/pkg/progress"
-	_ "github.com/aquasecurity/defsec/pkg/rules"
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
+	"github.com/wuwwlwwl/defsec/internal/rules"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/progress"
+	_ "github.com/wuwwlwwl/defsec/pkg/rules"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 )
 
 var _ ConfigurableAWSScanner = (*Scanner)(nil)

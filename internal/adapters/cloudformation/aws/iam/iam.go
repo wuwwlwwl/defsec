@@ -1,9 +1,9 @@
 package iam
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/iam"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/iam"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 // Adapt ...

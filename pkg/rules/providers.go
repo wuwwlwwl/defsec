@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"github.com/aquasecurity/defsec/internal/rules"
+	"github.com/wuwwlwwl/defsec/internal/rules"
 )
 
 type Provider struct {

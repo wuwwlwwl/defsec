@@ -4,20 +4,20 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	"github.com/aquasecurity/defsec/pkg/errs"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	"github.com/wuwwlwwl/defsec/pkg/errs"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 
 	"github.com/aws/aws-sdk-go-v2/service/sts"
 
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/options"
-	"github.com/aquasecurity/defsec/pkg/progress"
-	"github.com/aquasecurity/defsec/pkg/state"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/aws/arn"
 	"github.com/aws/aws-sdk-go-v2/config"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/options"
+	"github.com/wuwwlwwl/defsec/pkg/progress"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 )
 
 var registeredAdapters []ServiceAdapter

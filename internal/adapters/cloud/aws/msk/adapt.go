@@ -1,13 +1,13 @@
 package msk
 
 import (
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/msk"
-	"github.com/aquasecurity/defsec/pkg/state"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
 	api "github.com/aws/aws-sdk-go-v2/service/kafka"
 	"github.com/aws/aws-sdk-go-v2/service/kafka/types"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/msk"
+	"github.com/wuwwlwwl/defsec/pkg/state"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type adapter struct {

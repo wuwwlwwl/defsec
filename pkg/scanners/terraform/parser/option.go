@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 )
 
 type ConfigurableTerraformParser interface {

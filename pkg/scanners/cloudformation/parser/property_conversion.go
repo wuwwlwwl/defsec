@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/cftypes"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/cftypes"
 )
 
 func (p *Property) IsConvertableTo(conversionType cftypes.CfType) bool {

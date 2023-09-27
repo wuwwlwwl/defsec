@@ -4,9 +4,9 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 
-	"github.com/aquasecurity/defsec/pkg/providers/nifcloud/sslcertificate"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/nifcloud/sslcertificate"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func adaptServerCertificates(modules terraform.Modules) []sslcertificate.ServerCertificate {

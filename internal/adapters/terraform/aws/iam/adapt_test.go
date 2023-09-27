@@ -3,9 +3,9 @@ package iam
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/tftestutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/tftestutil"
 )
 
 func TestLines(t *testing.T) {

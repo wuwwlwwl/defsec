@@ -3,7 +3,7 @@ package armjson
 import (
 	"fmt"
 
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 var nullRunes = []rune("null")

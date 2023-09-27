@@ -3,15 +3,15 @@ package executor
 import (
 	"io"
 
-	"github.com/aquasecurity/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 
-	"github.com/aquasecurity/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 
-	"github.com/aquasecurity/defsec/pkg/rego"
+	"github.com/wuwwlwwl/defsec/pkg/rego"
 )
 
 type Option func(s *Executor)

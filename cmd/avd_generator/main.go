@@ -10,10 +10,10 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/aquasecurity/defsec/internal/rules"
-	"github.com/aquasecurity/defsec/pkg/framework"
-	_ "github.com/aquasecurity/defsec/pkg/rego"
-	registered "github.com/aquasecurity/defsec/pkg/rules"
+	"github.com/wuwwlwwl/defsec/internal/rules"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
+	_ "github.com/wuwwlwwl/defsec/pkg/rego"
+	registered "github.com/wuwwlwwl/defsec/pkg/rules"
 )
 
 func main() {

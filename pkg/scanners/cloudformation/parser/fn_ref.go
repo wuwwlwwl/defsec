@@ -1,7 +1,7 @@
 package parser
 
 import (
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/cftypes"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/cftypes"
 )
 
 func ResolveReference(property *Property) (resolved *Property, success bool) {

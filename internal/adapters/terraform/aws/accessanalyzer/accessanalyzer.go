@@ -1,9 +1,9 @@
 package accessanalyzer
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/accessanalyzer"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/accessanalyzer"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func Adapt(modules terraform.Modules) accessanalyzer.AccessAnalyzer {

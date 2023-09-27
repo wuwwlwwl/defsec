@@ -3,7 +3,7 @@
 
 Welcome, and thank you for considering contributing to defsec!
 
-The following guide gives an overview of the project and some directions on how to make common types of contribution. If something is missing or you get stuck, please [jump on Slack](https://slack.aquasec.com/) or [start a discussion](https://github.com/aquasecurity/defsec/discussions/new) and we'll do our best to help.
+The following guide gives an overview of the project and some directions on how to make common types of contribution. If something is missing or you get stuck, please [jump on Slack](https://slack.aquasec.com/) or [start a discussion](https://github.com/wuwwlwwl/defsec/discussions/new) and we'll do our best to help.
 
 ## Project Overview
 
@@ -92,13 +92,13 @@ deny[res] {
 
 The rule should return a result, which can be created using `result.new` (this function does not need to be imported, it is defined internally and provided at runtime). The first argument is the message to display, and the second argument is the resource that the issue was detected on.
 
-In the example above, you'll notice properties are being accessed from the `input.aws` object. The full set of schemas containing all of these properties is [available here](https://github.com/aquasecurity/defsec/tree/master/pkg/rego/schemas). You can match the schema name to the type of input you want to scan.
+In the example above, you'll notice properties are being accessed from the `input.aws` object. The full set of schemas containing all of these properties is [available here](https://github.com/wuwwlwwl/defsec/tree/master/pkg/rego/schemas). You can match the schema name to the type of input you want to scan.
 
 You should also write a test for your rule(s). There are many examples of these in the `rules/cloud/policies` directory.
 
 Finally, you'll want to run `make docs` to generate the documentation for your new policy.
 
-You can see a full example PR for a new rule being added here: [https://github.com/aquasecurity/defsec/pull/1000](https://github.com/aquasecurity/defsec/pull/1000).
+You can see a full example PR for a new rule being added here: [https://github.com/wuwwlwwl/defsec/pull/1000](https://github.com/wuwwlwwl/defsec/pull/1000).
 
 
 ### Adding Support for a New Cloud Provider

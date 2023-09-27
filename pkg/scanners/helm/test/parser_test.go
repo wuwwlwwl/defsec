@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/aquasecurity/defsec/pkg/detection"
-	"github.com/aquasecurity/defsec/pkg/scanners/helm/parser"
+	"github.com/wuwwlwwl/defsec/pkg/detection"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/helm/parser"
 )
 
 func Test_helm_parser(t *testing.T) {

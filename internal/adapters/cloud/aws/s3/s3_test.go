@@ -3,18 +3,18 @@ package s3
 import (
 	"context"
 
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/aws/test"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/s3"
-	"github.com/aquasecurity/defsec/pkg/state"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	s3api "github.com/aws/aws-sdk-go-v2/service/s3"
 	s3types "github.com/aws/aws-sdk-go-v2/service/s3/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws/test"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/s3"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 
 	"testing"
 
-	aws2 "github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
+	aws2 "github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
 )
 
 type publicAccessBlock struct {

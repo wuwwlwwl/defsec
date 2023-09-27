@@ -6,12 +6,12 @@ import (
 	"io/fs"
 	"path/filepath"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
 	"github.com/BurntSushi/toml"
-	"github.com/aquasecurity/defsec/pkg/detection"
+	"github.com/wuwwlwwl/defsec/pkg/detection"
 )
 
 var _ options.ConfigurableParser = (*Parser)(nil)

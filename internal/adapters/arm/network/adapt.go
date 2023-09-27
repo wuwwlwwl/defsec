@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/providers/azure/network"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/network"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func Adapt(deployment azure.Deployment) network.Network {

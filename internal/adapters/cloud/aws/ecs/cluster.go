@@ -3,12 +3,12 @@ package ecs
 import (
 	"fmt"
 
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/ecs"
 	ecsapi "github.com/aws/aws-sdk-go-v2/service/ecs"
 	"github.com/aws/aws-sdk-go-v2/service/ecs/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/ecs"
 )
 
 func (a *adapter) getClusters() ([]ecs.Cluster, error) {

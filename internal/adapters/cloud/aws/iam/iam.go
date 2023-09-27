@@ -1,11 +1,11 @@
 package iam
 
 import (
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/iam"
-	"github.com/aquasecurity/defsec/pkg/state"
-	"github.com/aquasecurity/defsec/pkg/types"
 	iamapi "github.com/aws/aws-sdk-go-v2/service/iam"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/iam"
+	"github.com/wuwwlwwl/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type adapter struct {

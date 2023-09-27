@@ -3,11 +3,11 @@ package iam
 import (
 	"math"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/iam"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/iam"
 )
 
 func adaptPasswordPolicy(modules terraform.Modules) iam.PasswordPolicy {

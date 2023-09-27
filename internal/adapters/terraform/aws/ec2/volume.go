@@ -1,9 +1,9 @@
 package ec2
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/ec2"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/ec2"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func adaptVolumes(modules terraform.Modules) []ec2.Volume {

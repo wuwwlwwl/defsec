@@ -7,14 +7,14 @@ import (
 	"sync"
 	"testing"
 
-	aws2 "github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
-	"github.com/aquasecurity/defsec/pkg/progress"
 	localstack "github.com/aquasecurity/go-mock-aws"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/credentials"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
+	aws2 "github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
+	"github.com/wuwwlwwl/defsec/pkg/progress"
 )
 
 func getOrCreateLocalStack(ctx context.Context) (*localstack.Stack, error) {

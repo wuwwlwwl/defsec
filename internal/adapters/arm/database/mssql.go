@@ -1,9 +1,9 @@
 package database
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/azure/database"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/database"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func adaptMSSQLServers(deployment azure.Deployment) (msSQlServers []database.MSSQLServer) {

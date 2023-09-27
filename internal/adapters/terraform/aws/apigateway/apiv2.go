@@ -1,9 +1,9 @@
 package apigateway
 
 import (
-	v2 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v2"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	v2 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v2"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func adaptAPIsV2(modules terraform.Modules) []v2.API {

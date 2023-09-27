@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 )
 
 // see https://github.com/windyroad/JUnit-Schema/blob/master/JUnit.xsd

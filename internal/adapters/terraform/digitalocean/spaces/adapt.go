@@ -1,10 +1,10 @@
 package spaces
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/digitalocean/spaces"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
 	"github.com/google/uuid"
+	"github.com/wuwwlwwl/defsec/pkg/providers/digitalocean/spaces"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func Adapt(modules terraform.Modules) spaces.Spaces {

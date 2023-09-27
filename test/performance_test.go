@@ -6,13 +6,13 @@ import (
 	"io/fs"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/parser"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/parser"
 
-	"github.com/aquasecurity/defsec/internal/rules"
+	"github.com/wuwwlwwl/defsec/internal/rules"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/executor"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/executor"
 
-	"github.com/aquasecurity/defsec/test/testutil"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func BenchmarkCalculate(b *testing.B) {

@@ -3,12 +3,12 @@ package terraform
 import (
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/executor"
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/parser"
-	"github.com/aquasecurity/defsec/pkg/severity"
-	"github.com/aquasecurity/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/executor"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/parser"
+	"github.com/wuwwlwwl/defsec/pkg/severity"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 )
 
 type ConfigurableTerraformScanner interface {

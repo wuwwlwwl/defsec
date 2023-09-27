@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
 	"github.com/zclconf/go-cty/cty"
 )

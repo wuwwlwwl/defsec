@@ -1,7 +1,7 @@
 package expressions
 
 import (
-	"github.com/aquasecurity/defsec/pkg/scanners/azure/functions"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure/functions"
 )
 
 type Node interface {

@@ -3,12 +3,12 @@ package network
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/providers/nifcloud/network"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/nifcloud/network"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/tftestutil"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/tftestutil"
 
-	"github.com/aquasecurity/defsec/test/testutil"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func Test_adaptVpnGateways(t *testing.T) {

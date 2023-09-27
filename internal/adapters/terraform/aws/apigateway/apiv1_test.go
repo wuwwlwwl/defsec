@@ -3,11 +3,11 @@ package apigateway
 import (
 	"testing"
 
-	v1 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v1"
+	v1 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v1"
 
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/tftestutil"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/tftestutil"
 
-	"github.com/aquasecurity/defsec/test/testutil"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func Test_adaptAPIMethodsV1(t *testing.T) {

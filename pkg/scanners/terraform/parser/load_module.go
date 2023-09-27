@@ -8,8 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/parser/resolvers"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/parser/resolvers"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 )
 
 type moduleLoadError struct {

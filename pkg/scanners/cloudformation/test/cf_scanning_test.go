@@ -6,9 +6,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

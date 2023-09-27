@@ -3,19 +3,19 @@ package sqs
 import (
 	"fmt"
 
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/aws/test"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/sqs"
-	"github.com/aquasecurity/defsec/pkg/state"
 	localstack "github.com/aquasecurity/go-mock-aws"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	sqsapi "github.com/aws/aws-sdk-go-v2/service/sqs"
 	sqsTypes "github.com/aws/aws-sdk-go-v2/service/sqs/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws/test"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/sqs"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 
 	"testing"
 
-	aws2 "github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
+	aws2 "github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
 )
 
 type queueDetails struct {

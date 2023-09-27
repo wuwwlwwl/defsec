@@ -1,8 +1,8 @@
 package iam
 
 import (
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
 	"github.com/liamg/iamgo"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type IAM struct {

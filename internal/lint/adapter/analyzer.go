@@ -12,8 +12,8 @@ import (
 )
 
 const (
-	defaultProviderPackage = "github.com/aquasecurity/defsec/pkg/providers"
-	defaultTypesPackage    = "github.com/aquasecurity/defsec/pkg/types"
+	defaultProviderPackage = "github.com/wuwwlwwl/defsec/pkg/providers"
+	defaultTypesPackage    = "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func DefaultAnalyzer() *analysis.Analyzer {

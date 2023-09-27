@@ -1,8 +1,8 @@
 package keyvault
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/azure/keyvault"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/keyvault"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
 )
 
 func Adapt(deployment azure.Deployment) keyvault.KeyVault {

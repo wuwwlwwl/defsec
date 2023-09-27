@@ -7,15 +7,15 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/framework"
-	"github.com/aquasecurity/defsec/pkg/providers"
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/severity"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
 	"github.com/mitchellh/mapstructure"
 	"github.com/open-policy-agent/opa/ast"
 	"github.com/open-policy-agent/opa/rego"
 	"github.com/open-policy-agent/opa/util"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/providers"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/severity"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type StaticMetadata struct {

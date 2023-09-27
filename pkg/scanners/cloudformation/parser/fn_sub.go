@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/cftypes"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/cftypes"
 )
 
 func ResolveSub(property *Property) (resolved *Property, success bool) {

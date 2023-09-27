@@ -1,8 +1,8 @@
 package apigateway
 
 import (
-	v1 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v1"
-	v2 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v2"
+	v1 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v1"
+	v2 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v2"
 )
 
 type APIGateway struct {

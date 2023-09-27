@@ -1,4 +1,4 @@
-module github.com/aquasecurity/defsec
+module github.com/wuwwlwwl/defsec
 
 go 1.19
 
@@ -76,6 +76,7 @@ require (
 )
 
 require (
+	github.com/aquasecurity/defsec v0.93.0
 	github.com/aws/smithy-go v1.13.5
 	github.com/docker/docker v24.0.5+incompatible
 	github.com/mitchellh/mapstructure v1.5.0
@@ -136,7 +137,6 @@ require (
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-metrics v0.0.1 // indirect
 	github.com/docker/go-units v0.5.0 // indirect
-	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/emicklei/go-restful/v3 v3.10.1 // indirect
 	github.com/emirpasic/gods v1.18.1 // indirect
 	github.com/evanphx/json-patch v5.6.0+incompatible // indirect

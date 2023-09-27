@@ -1,8 +1,8 @@
 package datafactory
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/azure/datafactory"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/datafactory"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
 )
 
 func Adapt(deployment azure.Deployment) datafactory.DataFactory {

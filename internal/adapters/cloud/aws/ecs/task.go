@@ -1,10 +1,10 @@
 package ecs
 
 import (
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/ecs"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
 	ecsapi "github.com/aws/aws-sdk-go-v2/service/ecs"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/ecs"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func (a *adapter) getTaskDefinitions() ([]ecs.TaskDefinition, error) {

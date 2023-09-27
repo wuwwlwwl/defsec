@@ -1,8 +1,8 @@
 package redshift
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/redshift"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/redshift"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
 )
 
 // Adapt ...

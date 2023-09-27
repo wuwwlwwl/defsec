@@ -1,9 +1,9 @@
 package options
 
 import (
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	"github.com/aquasecurity/defsec/pkg/debug"
-	"github.com/aquasecurity/defsec/pkg/progress"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/progress"
 )
 
 type Options struct {

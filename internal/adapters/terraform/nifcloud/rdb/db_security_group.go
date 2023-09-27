@@ -1,9 +1,9 @@
 package rdb
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/nifcloud/rdb"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/nifcloud/rdb"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func adaptDBSecurityGroups(modules terraform.Modules) []rdb.DBSecurityGroup {

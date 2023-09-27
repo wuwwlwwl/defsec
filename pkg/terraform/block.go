@@ -5,9 +5,9 @@ import (
 	"io/fs"
 	"strings"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/context"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/context"
 
 	"github.com/google/uuid"
 	"github.com/hashicorp/hcl/v2"

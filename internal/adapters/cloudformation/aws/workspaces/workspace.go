@@ -1,8 +1,8 @@
 package workspaces
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/workspaces"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/workspaces"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
 )
 
 func getWorkSpaces(ctx parser.FileContext) (workSpaces []workspaces.WorkSpace) {

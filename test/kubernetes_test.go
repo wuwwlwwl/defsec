@@ -7,11 +7,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/kubernetes"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/kubernetes"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

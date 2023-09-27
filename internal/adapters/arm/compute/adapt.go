@@ -1,9 +1,9 @@
 package compute
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/azure/compute"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/compute"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func Adapt(deployment azure.Deployment) compute.Compute {

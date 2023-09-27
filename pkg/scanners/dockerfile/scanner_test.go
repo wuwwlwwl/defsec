@@ -5,15 +5,15 @@ import (
 	"context"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/framework"
-	"github.com/aquasecurity/defsec/pkg/rego"
-	"github.com/aquasecurity/defsec/pkg/rego/schemas"
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
-	"github.com/aquasecurity/defsec/rules"
-	"github.com/aquasecurity/defsec/test/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/rego"
+	"github.com/wuwwlwwl/defsec/pkg/rego/schemas"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/rules"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 const DS006PolicyWithDockerfileSchema = `# METADATA

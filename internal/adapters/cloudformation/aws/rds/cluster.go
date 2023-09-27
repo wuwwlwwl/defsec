@@ -1,9 +1,9 @@
 package rds
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/rds"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/rds"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func getClusters(ctx parser.FileContext) (clusters map[string]rds.Cluster) {

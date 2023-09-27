@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type metadataProvider interface {

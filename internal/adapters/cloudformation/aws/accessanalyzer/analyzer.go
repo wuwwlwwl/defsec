@@ -1,9 +1,9 @@
 package accessanalyzer
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/accessanalyzer"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/accessanalyzer"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func getAccessAnalyzer(ctx parser.FileContext) (analyzers []accessanalyzer.Analyzer) {

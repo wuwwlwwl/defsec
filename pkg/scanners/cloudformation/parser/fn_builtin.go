@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/cftypes"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/cftypes"
 
 	"github.com/apparentlymart/go-cidr/cidr"
 )

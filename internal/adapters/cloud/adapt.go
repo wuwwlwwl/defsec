@@ -3,9 +3,9 @@ package cloud
 import (
 	"context"
 
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/options"
-	"github.com/aquasecurity/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/options"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 )
 
 // Adapt ...

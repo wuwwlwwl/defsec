@@ -1,14 +1,14 @@
 package google
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/google/bigquery"
-	"github.com/aquasecurity/defsec/pkg/providers/google/compute"
-	"github.com/aquasecurity/defsec/pkg/providers/google/dns"
-	"github.com/aquasecurity/defsec/pkg/providers/google/gke"
-	"github.com/aquasecurity/defsec/pkg/providers/google/iam"
-	"github.com/aquasecurity/defsec/pkg/providers/google/kms"
-	"github.com/aquasecurity/defsec/pkg/providers/google/sql"
-	"github.com/aquasecurity/defsec/pkg/providers/google/storage"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/bigquery"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/compute"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/dns"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/gke"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/iam"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/kms"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/sql"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/storage"
 )
 
 type Google struct {

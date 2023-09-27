@@ -3,7 +3,7 @@ package formatters
 import (
 	"fmt"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 )
 
 func outputSimple(b ConfigurableFormatter, results scan.Results) error {

@@ -7,21 +7,21 @@ import (
 	"io/fs"
 	"sync"
 
-	"github.com/aquasecurity/defsec/internal/adapters/arm"
-	"github.com/aquasecurity/defsec/pkg/rego"
-	"github.com/aquasecurity/defsec/pkg/rules"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
-	"github.com/aquasecurity/defsec/pkg/state"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/internal/adapters/arm"
+	"github.com/wuwwlwwl/defsec/pkg/rego"
+	"github.com/wuwwlwwl/defsec/pkg/rules"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
+	"github.com/wuwwlwwl/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 
-	"github.com/aquasecurity/defsec/pkg/framework"
-	"github.com/aquasecurity/defsec/pkg/scanners"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure/arm/parser"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/scanners"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure/arm/parser"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 )
 
 var _ scanners.FSScanner = (*Scanner)(nil)

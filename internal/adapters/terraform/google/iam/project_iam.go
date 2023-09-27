@@ -3,11 +3,11 @@ package iam
 import (
 	"strings"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 
-	"github.com/aquasecurity/defsec/pkg/providers/google/iam"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/iam"
 )
 
 // see https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam

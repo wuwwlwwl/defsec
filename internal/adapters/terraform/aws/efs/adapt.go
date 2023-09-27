@@ -1,8 +1,8 @@
 package efs
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/efs"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/efs"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 )
 
 func Adapt(modules terraform.Modules) efs.EFS {

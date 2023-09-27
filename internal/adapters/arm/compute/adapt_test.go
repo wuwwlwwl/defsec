@@ -3,8 +3,8 @@ package compute
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
 	"github.com/stretchr/testify/assert"
 

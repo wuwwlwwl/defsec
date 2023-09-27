@@ -10,23 +10,23 @@ import (
 	"sync"
 	"time"
 
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
-	"github.com/aquasecurity/defsec/pkg/rego"
-	"github.com/aquasecurity/defsec/pkg/scanners"
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/executor"
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/parser"
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/parser/resolvers"
+	"github.com/wuwwlwwl/defsec/pkg/rego"
+	"github.com/wuwwlwwl/defsec/pkg/scanners"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/executor"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/parser"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/parser/resolvers"
 
-	"github.com/aquasecurity/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
 
-	"github.com/aquasecurity/defsec/pkg/extrafs"
+	"github.com/wuwwlwwl/defsec/pkg/extrafs"
 )
 
 var _ scanners.FSScanner = (*Scanner)(nil)

@@ -1,9 +1,9 @@
 package mq
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/mq"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/mq"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func getBrokers(ctx parser.FileContext) (brokers []mq.Broker) {

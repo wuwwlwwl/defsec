@@ -3,7 +3,7 @@ package dockerfile
 import (
 	"reflect"
 
-	"github.com/aquasecurity/defsec/pkg/rego/convert"
+	"github.com/wuwwlwwl/defsec/pkg/rego/convert"
 )
 
 // NOTE: we are currently preserving mixed case json here for backward compatibility

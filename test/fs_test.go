@@ -5,12 +5,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform"
 )
 
 func Test_OS_FS(t *testing.T) {

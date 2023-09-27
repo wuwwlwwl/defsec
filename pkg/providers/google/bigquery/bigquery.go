@@ -1,7 +1,7 @@
 package bigquery
 
 import (
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type BigQuery struct {

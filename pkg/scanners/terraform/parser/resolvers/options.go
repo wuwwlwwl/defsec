@@ -3,7 +3,7 @@ package resolvers
 import (
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
 )
 
 type Options struct {

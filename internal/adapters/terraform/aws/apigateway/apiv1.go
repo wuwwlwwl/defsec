@@ -1,9 +1,9 @@
 package apigateway
 
 import (
-	v1 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v1"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	v1 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v1"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func adaptAPIResourcesV1(modules terraform.Modules, apiBlock *terraform.Block) []v1.Resource {

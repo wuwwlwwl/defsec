@@ -1,9 +1,9 @@
 package ssm
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/ssm"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	"github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/ssm"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func Adapt(modules terraform.Modules) ssm.SSM {

@@ -3,11 +3,11 @@ package compute
 import (
 	"encoding/base64"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 
-	"github.com/aquasecurity/defsec/pkg/providers/azure/compute"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/compute"
 )
 
 func Adapt(modules terraform.Modules) compute.Compute {

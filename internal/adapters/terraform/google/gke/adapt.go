@@ -1,10 +1,10 @@
 package gke
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/google/gke"
-	"github.com/aquasecurity/defsec/pkg/terraform"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
 	"github.com/google/uuid"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/gke"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 	"github.com/zclconf/go-cty/cty"
 )
 

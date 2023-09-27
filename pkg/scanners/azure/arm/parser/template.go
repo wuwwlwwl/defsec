@@ -1,9 +1,9 @@
 package parser
 
 import (
-	types2 "github.com/aquasecurity/defsec/pkg/scanners/azure"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure/arm/parser/armjson"
-	"github.com/aquasecurity/defsec/pkg/types"
+	types2 "github.com/wuwwlwwl/defsec/pkg/scanners/azure"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure/arm/parser/armjson"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type Template struct {

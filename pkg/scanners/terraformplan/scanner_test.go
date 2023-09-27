@@ -7,10 +7,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
-	"github.com/aquasecurity/defsec/test/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func Test_OptionWithPolicyDirs_OldRegoMetadata(t *testing.T) {

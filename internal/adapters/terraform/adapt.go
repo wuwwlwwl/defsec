@@ -1,18 +1,18 @@
 package terraform
 
 import (
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/aws"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/cloudstack"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/digitalocean"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/github"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/google"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/kubernetes"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/nifcloud"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/openstack"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/oracle"
-	"github.com/aquasecurity/defsec/pkg/state"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/aws"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/cloudstack"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/digitalocean"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/github"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/google"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/kubernetes"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/nifcloud"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/openstack"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/oracle"
+	"github.com/wuwwlwwl/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 )
 
 func Adapt(modules terraform.Modules) *state.State {

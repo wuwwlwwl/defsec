@@ -3,14 +3,14 @@ package ec2
 import (
 	"testing"
 
-	aws2 "github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
-	"github.com/aquasecurity/defsec/internal/adapters/cloud/aws/test"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/ec2"
-	"github.com/aquasecurity/defsec/pkg/state"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	vpcApi "github.com/aws/aws-sdk-go-v2/service/ec2"
 	vpcTypes "github.com/aws/aws-sdk-go-v2/service/ec2/types"
 	"github.com/stretchr/testify/require"
+	aws2 "github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
+	"github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws/test"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/ec2"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 )
 
 type rule struct {

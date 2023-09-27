@@ -1,8 +1,8 @@
 package database
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/azure/database"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/database"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
 )
 
 func addFirewallRule(resource azure.Resource) []database.FirewallRule {

@@ -3,12 +3,12 @@ package state
 import (
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/ec2"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/ec2"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/rds"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/rds"
 
 	"github.com/stretchr/testify/assert"
 )

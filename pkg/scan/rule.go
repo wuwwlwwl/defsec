@@ -5,19 +5,19 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/aquasecurity/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
 
 	"golang.org/x/text/language"
 
 	"golang.org/x/text/cases"
 
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 
-	"github.com/aquasecurity/defsec/pkg/severity"
+	"github.com/wuwwlwwl/defsec/pkg/severity"
 
-	"github.com/aquasecurity/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/state"
 
-	"github.com/aquasecurity/defsec/pkg/providers"
+	"github.com/wuwwlwwl/defsec/pkg/providers"
 )
 
 type CheckFunc func(s *state.State) (results Results)

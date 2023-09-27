@@ -4,11 +4,11 @@ import (
 	"strconv"
 	"strings"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 
-	"github.com/aquasecurity/defsec/pkg/providers/azure/network"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/network"
 
 	"github.com/google/uuid"
 )

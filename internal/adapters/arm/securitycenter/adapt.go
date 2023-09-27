@@ -1,8 +1,8 @@
 package securitycenter
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/azure/securitycenter"
-	"github.com/aquasecurity/defsec/pkg/scanners/azure"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/securitycenter"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
 )
 
 func Adapt(deployment azure.Deployment) securitycenter.SecurityCenter {

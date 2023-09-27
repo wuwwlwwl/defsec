@@ -6,14 +6,14 @@ import (
 	"io"
 	"io/fs"
 
-	"github.com/aquasecurity/defsec/pkg/debug"
-	"github.com/aquasecurity/defsec/pkg/framework"
-	"github.com/aquasecurity/defsec/pkg/scan"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
-	terraformScanner "github.com/aquasecurity/defsec/pkg/scanners/terraform"
-	"github.com/aquasecurity/defsec/pkg/scanners/terraform/executor"
-	"github.com/aquasecurity/defsec/pkg/scanners/terraformplan/parser"
 	doublestar "github.com/bmatcuk/doublestar/v4"
+	"github.com/wuwwlwwl/defsec/pkg/debug"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/scan"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
+	terraformScanner "github.com/wuwwlwwl/defsec/pkg/scanners/terraform"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraform/executor"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/terraformplan/parser"
 )
 
 var tfPlanExts = []string{

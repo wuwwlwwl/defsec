@@ -1,21 +1,21 @@
 package azure
 
 import (
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/appservice"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/authorization"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/compute"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/container"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/database"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/datafactory"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/datalake"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/keyvault"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/monitor"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/network"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/securitycenter"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/storage"
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/azure/synapse"
-	"github.com/aquasecurity/defsec/pkg/providers/azure"
-	"github.com/aquasecurity/defsec/pkg/terraform"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/appservice"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/authorization"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/compute"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/container"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/database"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/datafactory"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/datalake"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/keyvault"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/monitor"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/network"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/securitycenter"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/storage"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/azure/synapse"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure"
+	"github.com/wuwwlwwl/defsec/pkg/terraform"
 )
 
 func Adapt(modules terraform.Modules) azure.Azure {

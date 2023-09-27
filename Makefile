@@ -6,7 +6,7 @@ test:
 
 .PHONY: test-no-localstack
 test-no-localstack:
-	go test $$(go list ./... | grep -v internal/adapters/cloud/aws | awk -F'github.com/aquasecurity/defsec/' '{print "./"$$2}')
+	go test $$(go list ./... | grep -v internal/adapters/cloud/aws | awk -F'github.com/wuwwlwwl/defsec/' '{print "./"$$2}')
 
 .PHONY: rego
 rego: fmt-rego test-rego

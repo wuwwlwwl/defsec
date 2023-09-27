@@ -3,15 +3,15 @@ package mq
 import (
 	"testing"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/mq"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/mq"
 
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/tftestutil"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/tftestutil"
 
-	"github.com/aquasecurity/defsec/test/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func Test_adaptBroker(t *testing.T) {

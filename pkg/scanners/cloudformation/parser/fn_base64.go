@@ -3,7 +3,7 @@ package parser
 import (
 	"encoding/base64"
 
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/cftypes"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/cftypes"
 )
 
 func ResolveBase64(property *Property) (*Property, bool) {

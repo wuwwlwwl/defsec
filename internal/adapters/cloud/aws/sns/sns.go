@@ -1,13 +1,13 @@
 package sns
 
 import (
-	aws2 "github.com/aquasecurity/defsec/internal/adapters/cloud/aws"
-	"github.com/aquasecurity/defsec/pkg/concurrency"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/sns"
-	"github.com/aquasecurity/defsec/pkg/state"
-	"github.com/aquasecurity/defsec/pkg/types"
 	snsapi "github.com/aws/aws-sdk-go-v2/service/sns"
 	snsTypes "github.com/aws/aws-sdk-go-v2/service/sns/types"
+	aws2 "github.com/wuwwlwwl/defsec/internal/adapters/cloud/aws"
+	"github.com/wuwwlwwl/defsec/pkg/concurrency"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/sns"
+	"github.com/wuwwlwwl/defsec/pkg/state"
+	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type adapter struct {

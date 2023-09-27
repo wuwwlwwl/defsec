@@ -1,9 +1,9 @@
 package sam
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/aws/sam"
-	"github.com/aquasecurity/defsec/pkg/scanners/cloudformation/parser"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/sam"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/cloudformation/parser"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 func getSimpleTables(cfFile parser.FileContext) (tables []sam.SimpleTable) {

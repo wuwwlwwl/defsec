@@ -5,20 +5,20 @@ import (
 	"io/fs"
 	"testing"
 
-	"github.com/aquasecurity/defsec/pkg/providers/azure"
-	"github.com/aquasecurity/defsec/pkg/providers/azure/authorization"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure"
+	"github.com/wuwwlwwl/defsec/pkg/providers/azure/authorization"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/iam"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/iam"
 
-	"github.com/aquasecurity/defsec/pkg/framework"
-	"github.com/aquasecurity/defsec/pkg/providers/aws"
-	"github.com/aquasecurity/defsec/pkg/providers/aws/rds"
-	"github.com/aquasecurity/defsec/pkg/scanners/options"
-	"github.com/aquasecurity/defsec/pkg/state"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
-	"github.com/aquasecurity/defsec/test/testutil"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"github.com/wuwwlwwl/defsec/pkg/framework"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/rds"
+	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
+	"github.com/wuwwlwwl/defsec/pkg/state"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func TestScanner_GetRegisteredRules(t *testing.T) {

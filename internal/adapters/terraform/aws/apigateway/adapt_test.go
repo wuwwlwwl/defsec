@@ -3,19 +3,19 @@ package apigateway
 import (
 	"testing"
 
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 
-	v2 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v2"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	v2 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v2"
 
-	"github.com/aquasecurity/defsec/pkg/providers/aws/apigateway"
+	"github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway"
 
-	v1 "github.com/aquasecurity/defsec/pkg/providers/aws/apigateway/v1"
+	v1 "github.com/wuwwlwwl/defsec/pkg/providers/aws/apigateway/v1"
 
-	"github.com/aquasecurity/defsec/internal/adapters/terraform/tftestutil"
+	"github.com/wuwwlwwl/defsec/internal/adapters/terraform/tftestutil"
 
-	"github.com/aquasecurity/defsec/test/testutil"
+	"github.com/wuwwlwwl/defsec/test/testutil"
 )
 
 func Test_Adapt(t *testing.T) {

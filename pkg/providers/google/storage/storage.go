@@ -1,8 +1,8 @@
 package storage
 
 import (
-	"github.com/aquasecurity/defsec/pkg/providers/google/iam"
-	defsecTypes "github.com/aquasecurity/defsec/pkg/types"
+	"github.com/wuwwlwwl/defsec/pkg/providers/google/iam"
+	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type Storage struct {
