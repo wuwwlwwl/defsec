@@ -212,6 +212,16 @@ func (v Value) AsString() string {
 	return v.rLit.(string)
 }
 
+func (v Value) AsExpressionString() string {
+	v.Resolve()
+
+	if v.Kind != KindExpression {
+		return ""
+	}
+
+	return v.rLit.(string)
+}
+
 func (v Value) AsBool() bool {
 	v.Resolve()
 	if v.Kind != KindBoolean {

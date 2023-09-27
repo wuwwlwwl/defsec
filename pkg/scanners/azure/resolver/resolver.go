@@ -30,7 +30,7 @@ func (r *resolver) ResolveExpression(expression azure.Value) azure.Value {
 	if r.deployment == nil {
 		panic("cannot resolve expression on nil deployment")
 	}
-	code := expression.AsString()
+	code := expression.AsExpressionString()
 
 	resolved, err := r.resolveExpressionString(code, expression.GetMetadata())
 	if err != nil {
