@@ -2,7 +2,9 @@ package azure
 
 import (
 	"os"
+	"strings"
 
+	"github.com/tomwright/dasel"
 	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
@@ -77,13 +79,33 @@ func (r *Resource) GetResourcesByType(t string) []Resource {
 	return resources
 }
 
-func (d *Deployment) GetParameter(parameterName string) interface{} {
+func (d *Deployment) GetParameter(name string) interface{} {
+
+	parameterName := name
+	propertyName := ""
+	indexDot := strings.Index(name, ".")
+	indexBracket := strings.Index(name, "[")
+	index := indexDot
+	if indexBracket < indexDot && indexBracket >= 0 {
+		index = indexBracket
+	}
+	if index >= 0 {
+		parameterName = name[:index]
+		propertyName = name[index:]
+	}
 
 	for _, parameter := range d.Parameters {
 		if parameter.Name == parameterName {
-			return parameter.Value.Raw()
+			value := parameter.Value.Raw()
+			if propertyName == "" {
+				return value
+			}
+			paramNode := dasel.New(value)
+			result, _ := paramNode.Query(propertyName)
+			return result.InterfaceValue()
 		}
 	}
+
 	return nil
 }
 

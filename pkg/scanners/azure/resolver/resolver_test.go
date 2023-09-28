@@ -46,6 +46,11 @@ func Test_resolveFunc(t *testing.T) {
 			expr:     "dateTimeAdd(utcNow('yyyy-MM-dd'), 'P1D', 'yyyy-MM-dd')",
 			expected: time.Now().UTC().AddDate(0, 0, 1).Format("2006-01-02"),
 		},
+		{
+			name:     "simple concat call",
+			expr:     "concat('myPostgreSQLServer', '/', 'log_checkpoints')",
+			expected: "myPostgreSQLServer/log_checkpoints",
+		},
 	}
 
 	for _, tt := range tests {
@@ -69,7 +74,7 @@ func Test_resolveParameter(t *testing.T) {
 		expected   string
 	}{
 		{
-			name: "format call with parameter",
+			name: "format call with parameter1",
 			deployment: &azure.Deployment{
 				Parameters: []azure.Parameter{
 					{
@@ -81,6 +86,36 @@ func Test_resolveParameter(t *testing.T) {
 				},
 			},
 			expr:     "format('{0}/{1}', parameters('dbName'), 'log_checkpoints')",
+			expected: "myPostgreSQLServer/log_checkpoints",
+		},
+		{
+			name: "format call with parameter2",
+			deployment: &azure.Deployment{
+				Parameters: []azure.Parameter{
+					{
+						Variable: azure.Variable{
+							Name:  "test",
+							Value: azure.NewValue(map[string]interface{}{"dbName": "myPostgreSQLServer"}, types.NewTestMetadata()),
+						},
+					},
+				},
+			},
+			expr:     "format('{0}/{1}', parameters('test').dbName, 'log_checkpoints')",
+			expected: "myPostgreSQLServer/log_checkpoints",
+		},
+		{
+			name: "format call with parameter3",
+			deployment: &azure.Deployment{
+				Parameters: []azure.Parameter{
+					{
+						Variable: azure.Variable{
+							Name:  "test",
+							Value: azure.NewValue([]interface{}{map[string]interface{}{"dbName": "myPostgreSQLServer"}}, types.NewTestMetadata()),
+						},
+					},
+				},
+			},
+			expr:     "format('{0}/{1}', parameters('test')[0].dbName, 'log_checkpoints')",
 			expected: "myPostgreSQLServer/log_checkpoints",
 		},
 	}

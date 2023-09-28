@@ -59,15 +59,27 @@ func newFunctionNode(tw *tokenWalker) Node {
 
 		switch token.Type {
 		case TokenCloseParen:
-			return funcNode
+			if funcNode.name != "parameters" {
+				return funcNode
+			}
+		case TokenComma:
+			if funcNode.name == "parameters" {
+				return funcNode
+			}
 		case TokenName:
 			if tw.peek().Type == TokenOpenParen {
 				//  this is a function, unwind 1
 				tw.unPop()
 				funcNode.args = append(funcNode.args, newFunctionNode(tw))
+			} else if funcNode.name == "parameters" {
+				funcNode.args = append(funcNode.args, expressionValue{token.Data})
 			}
 		case TokenLiteralString, TokenLiteralInteger, TokenLiteralFloat:
 			funcNode.args = append(funcNode.args, expressionValue{token.Data})
+		case TokenDot, TokenOpenBracket, TokenCloseBracket:
+			if funcNode.name == "parameters" {
+				funcNode.args = append(funcNode.args, expressionValue{token.Data})
+			}
 		}
 
 	}
