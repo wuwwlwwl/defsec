@@ -7,7 +7,6 @@ import (
 	"testing"
 
 	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
-	"github.com/wuwwlwwl/defsec/pkg/scanners/azure/resolver"
 	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
 	"github.com/stretchr/testify/assert"
@@ -61,7 +60,7 @@ func TestParser_Parse(t *testing.T) {
 }`,
 			want: func() azure.Deployment {
 
-				root := createMetadata(targetFS, filename, 0, 0, "", nil).WithInternal(resolver.NewResolver())
+				root := createMetadata(targetFS, filename, 0, 0, "", nil).WithInternal(azure.NewResolver())
 				metadata := createMetadata(targetFS, filename, 1, 13, "", &root)
 				parametersMetadata := createMetadata(targetFS, filename, 4, 11, "parameters", &metadata)
 				storageMetadata := createMetadata(targetFS, filename, 5, 10, "parameters.storagePrefix", &parametersMetadata)
@@ -132,7 +131,7 @@ func TestParser_Parse(t *testing.T) {
 }`,
 			want: func() azure.Deployment {
 
-				rootMetadata := createMetadata(targetFS, filename, 0, 0, "", nil).WithInternal(resolver.NewResolver())
+				rootMetadata := createMetadata(targetFS, filename, 0, 0, "", nil).WithInternal(azure.NewResolver())
 				fileMetadata := createMetadata(targetFS, filename, 1, 45, "", &rootMetadata)
 				resourcesMetadata := createMetadata(targetFS, filename, 5, 44, "resources", &fileMetadata)
 

@@ -1,11 +1,10 @@
-package resolver
+package azure
 
 import (
 	"testing"
 	"time"
 
 	"github.com/stretchr/testify/require"
-	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
 	"github.com/wuwwlwwl/defsec/pkg/types"
 )
 
@@ -59,7 +58,7 @@ func Test_resolveFunc(t *testing.T) {
 
 			resolvedValue, err := resolver.resolveExpressionString(tt.expr, types.NewTestMetadata())
 			require.NoError(t, err)
-			require.Equal(t, azure.KindString, resolvedValue.Kind)
+			require.Equal(t, KindString, resolvedValue.Kind)
 
 			require.Equal(t, tt.expected, resolvedValue.AsString())
 		})
@@ -69,18 +68,19 @@ func Test_resolveFunc(t *testing.T) {
 func Test_resolveParameter(t *testing.T) {
 	tests := []struct {
 		name       string
-		deployment *azure.Deployment
+		deployment *Deployment
 		expr       string
 		expected   string
 	}{
+
 		{
 			name: "format call with parameter1",
-			deployment: &azure.Deployment{
-				Parameters: []azure.Parameter{
+			deployment: &Deployment{
+				Parameters: []Parameter{
 					{
-						Variable: azure.Variable{
+						Variable: Variable{
 							Name:  "dbName",
-							Value: azure.NewValue("myPostgreSQLServer", types.NewTestMetadata()),
+							Value: NewValue("myPostgreSQLServer", types.NewTestMetadata()),
 						},
 					},
 				},
@@ -90,12 +90,12 @@ func Test_resolveParameter(t *testing.T) {
 		},
 		{
 			name: "format call with parameter2",
-			deployment: &azure.Deployment{
-				Parameters: []azure.Parameter{
+			deployment: &Deployment{
+				Parameters: []Parameter{
 					{
-						Variable: azure.Variable{
+						Variable: Variable{
 							Name:  "test",
-							Value: azure.NewValue(map[string]interface{}{"dbName": "myPostgreSQLServer"}, types.NewTestMetadata()),
+							Value: NewValue(map[string]interface{}{"dbName": "myPostgreSQLServer"}, types.NewTestMetadata()),
 						},
 					},
 				},
@@ -105,18 +105,48 @@ func Test_resolveParameter(t *testing.T) {
 		},
 		{
 			name: "format call with parameter3",
-			deployment: &azure.Deployment{
-				Parameters: []azure.Parameter{
+			deployment: &Deployment{
+				Parameters: []Parameter{
 					{
-						Variable: azure.Variable{
+						Variable: Variable{
 							Name:  "test",
-							Value: azure.NewValue([]interface{}{map[string]interface{}{"dbName": "myPostgreSQLServer"}}, types.NewTestMetadata()),
+							Value: NewValue([]interface{}{map[string]interface{}{"dbName": "myPostgreSQLServer"}}, types.NewTestMetadata()),
 						},
 					},
 				},
 			},
 			expr:     "format('{0}/{1}', parameters('test')[0].dbName, 'log_checkpoints')",
 			expected: "myPostgreSQLServer/log_checkpoints",
+		},
+		{
+			name: "format call with parameter4",
+			deployment: &Deployment{
+				Parameters: []Parameter{
+					{
+						Variable: Variable{
+							Name:  "test",
+							Value: NewValue([]interface{}{map[string]interface{}{"dbName": []interface{}{"myPostgreSQLServer"}}}, types.NewTestMetadata()),
+						},
+					},
+				},
+			},
+			expr:     "format('{0}/{1}', parameters('test')[0].dbName[0], 'log_checkpoints')",
+			expected: "myPostgreSQLServer/log_checkpoints",
+		},
+		{
+			name: "format call with parameter5",
+			deployment: &Deployment{
+				Parameters: []Parameter{
+					{
+						Variable: Variable{
+							Name:  "test",
+							Value: NewValue([]interface{}{map[string]interface{}{"dbName": []interface{}{"myPostgreSQLServer"}, "count": "2"}}, types.NewTestMetadata()),
+						},
+					},
+				},
+			},
+			expr:     "parameters('test')[0].count",
+			expected: "2",
 		},
 	}
 	for _, tt := range tests {
@@ -127,7 +157,7 @@ func Test_resolveParameter(t *testing.T) {
 
 			resolvedValue, err := resolver.resolveExpressionString(tt.expr, types.NewTestMetadata())
 			require.NoError(t, err)
-			require.Equal(t, azure.KindString, resolvedValue.Kind)
+			require.Equal(t, KindString, resolvedValue.Kind)
 
 			require.Equal(t, tt.expected, resolvedValue.AsString())
 		})

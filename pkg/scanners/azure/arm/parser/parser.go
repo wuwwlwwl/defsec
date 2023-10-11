@@ -10,7 +10,6 @@ import (
 
 	"github.com/wuwwlwwl/defsec/pkg/debug"
 	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
-	"github.com/wuwwlwwl/defsec/pkg/scanners/azure/resolver"
 
 	"github.com/wuwwlwwl/defsec/pkg/scanners/options"
 
@@ -117,7 +116,7 @@ func (p *Parser) parseFile(r io.Reader, filename string) (*azure.Deployment, err
 	root := types.NewMetadata(
 		types.NewRange(filename, 0, 0, "", p.targetFS),
 		"",
-	).WithInternal(resolver.NewResolver())
+	).WithInternal(azure.NewResolver())
 
 	if err := armjson.Unmarshal(data, &template, &root); err != nil {
 		return nil, fmt.Errorf("failed to parse template: %w", err)
@@ -136,7 +135,7 @@ func (p *Parser) convertTemplate(template Template) *azure.Deployment {
 		Outputs:     nil,
 	}
 
-	if r, ok := template.Metadata.Internal().(resolver.Resolver); ok {
+	if r, ok := template.Metadata.Internal().(azure.Resolver); ok {
 		r.SetDeployment(&deployment)
 	}
 
@@ -166,6 +165,14 @@ func (p *Parser) convertTemplate(template Template) *azure.Deployment {
 		})
 	}
 
+	if template.Copy != nil {
+		deployment.Copy = &azure.Copy{
+			Name:      template.Copy.Name,
+			Mode:      template.Copy.Mode,
+			BatchSize: template.Copy.BatchSize,
+			Count:     template.Copy.Count,
+		}
+	}
 	for _, resource := range template.Resources {
 		deployment.Resources = append(deployment.Resources, p.convertResource(resource))
 	}
@@ -182,14 +189,43 @@ func (p *Parser) convertResource(input Resource) azure.Resource {
 	}
 
 	resource := azure.Resource{
-		Metadata:   input.Metadata,
-		APIVersion: input.APIVersion,
-		Type:       input.Type,
-		Kind:       input.Kind,
-		Name:       input.Name,
-		Location:   input.Location,
-		Properties: input.Properties,
-		Resources:  children,
+		Metadata:             input.Metadata,
+		Condition:            input.Condition,
+		APIVersion:           input.APIVersion,
+		Type:                 input.Type,
+		Kind:                 input.Kind,
+		Name:                 input.Name,
+		Location:             input.Location,
+		Properties:           input.Properties,
+		DeploymentProperties: azure.DeploymentProperties{},
+		Resources:            children,
+	}
+
+	if input.Copy != nil {
+		resource.Copy = &azure.Copy{
+			Name:      input.Copy.Name,
+			Mode:      input.Copy.Mode,
+			BatchSize: input.Copy.BatchSize,
+			Count:     input.Copy.Count,
+		}
+	}
+
+	if input.TemplateProperties.Template != nil {
+		resource.DeploymentProperties = azure.DeploymentProperties{
+			Mode:            input.TemplateProperties.Mode,
+			ParameterValues: map[string]azure.Value{},
+			Deployment:      p.convertTemplate(*input.TemplateProperties.Template),
+		}
+
+		if input.TemplateProperties.ExpressionEvaluationOptions != nil {
+			resource.DeploymentProperties.ExpressionEvaluationOptions = &azure.ExpressionEvaluationOptions{
+				Scope: input.TemplateProperties.ExpressionEvaluationOptions.Scope,
+			}
+		}
+		for name, param := range input.TemplateProperties.ParameterValues {
+			resource.DeploymentProperties.ParameterValues[name] = param.Value
+		}
+
 	}
 
 	return resource

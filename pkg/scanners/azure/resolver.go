@@ -1,14 +1,13 @@
-package resolver
+package azure
 
 import (
-	"github.com/wuwwlwwl/defsec/pkg/scanners/azure"
 	"github.com/wuwwlwwl/defsec/pkg/scanners/azure/expressions"
 	defsecTypes "github.com/wuwwlwwl/defsec/pkg/types"
 )
 
 type Resolver interface {
-	ResolveExpression(expression azure.Value) azure.Value
-	SetDeployment(d *azure.Deployment)
+	ResolveExpression(expression Value) Value
+	SetDeployment(d *Deployment)
 }
 
 func NewResolver() Resolver {
@@ -16,15 +15,15 @@ func NewResolver() Resolver {
 }
 
 type resolver struct {
-	deployment *azure.Deployment
+	deployment *Deployment
 }
 
-func (r *resolver) SetDeployment(d *azure.Deployment) {
+func (r *resolver) SetDeployment(d *Deployment) {
 	r.deployment = d
 }
 
-func (r *resolver) ResolveExpression(expression azure.Value) azure.Value {
-	if expression.Kind != azure.KindExpression {
+func (r *resolver) ResolveExpression(expression Value) Value {
+	if expression.Kind != KindExpression {
 		return expression
 	}
 	if r.deployment == nil {
@@ -34,18 +33,18 @@ func (r *resolver) ResolveExpression(expression azure.Value) azure.Value {
 
 	resolved, err := r.resolveExpressionString(code, expression.GetMetadata())
 	if err != nil {
-		expression.Kind = azure.KindUnresolvable
+		expression.Kind = KindUnresolvable
 		return expression
 	}
 	return resolved
 }
 
-func (r *resolver) resolveExpressionString(code string, metadata defsecTypes.Metadata) (azure.Value, error) {
+func (r *resolver) resolveExpressionString(code string, metadata defsecTypes.Metadata) (Value, error) {
 	et, err := expressions.NewExpressionTree(code)
 	if err != nil {
-		return azure.NullValue, err
+		return NullValue, err
 	}
 
 	evaluatedValue := et.Evaluate(r.deployment)
-	return azure.NewValue(evaluatedValue, metadata), nil
+	return NewValue(evaluatedValue, metadata), nil
 }

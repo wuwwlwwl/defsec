@@ -50,6 +50,7 @@ func newFunctionNode(tw *tokenWalker) Node {
 	funcNode := &expression{
 		name: tw.pop().Data.(string),
 	}
+	tokenCloseParenCount := 0
 
 	for tw.hasNext() {
 		token := tw.pop()
@@ -61,7 +62,11 @@ func newFunctionNode(tw *tokenWalker) Node {
 		case TokenCloseParen:
 			if funcNode.name != "parameters" {
 				return funcNode
+			} else if tokenCloseParenCount == 1 {
+				tw.unPop()
+				return funcNode
 			}
+			tokenCloseParenCount++
 		case TokenComma:
 			if funcNode.name == "parameters" {
 				return funcNode

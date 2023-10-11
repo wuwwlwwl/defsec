@@ -1,6 +1,7 @@
 package azure
 
 import (
+	"fmt"
 	"os"
 	"strings"
 
@@ -13,6 +14,7 @@ type Deployment struct {
 	TargetScope Scope
 	Parameters  []Parameter
 	Variables   []Variable
+	Copy        *Copy
 	Resources   []Resource
 	Outputs     []Output
 }
@@ -31,16 +33,37 @@ type Variable struct {
 type Output Variable
 
 type Resource struct {
-	Metadata   types.Metadata
-	APIVersion Value
-	Type       Value
-	Kind       Value
-	Name       Value
-	Location   Value
-	Tags       Value
-	Sku        Value
-	Properties Value
-	Resources  []Resource
+	Metadata             types.Metadata
+	Condition            Value
+	APIVersion           Value
+	Type                 Value
+	Kind                 Value
+	Name                 Value
+	Location             Value
+	Tags                 Value
+	Sku                  Value
+	DeploymentProperties DeploymentProperties
+	Copy                 *Copy
+	Properties           Value
+	Resources            []Resource
+}
+
+type Copy struct {
+	Name      Value
+	Mode      Value
+	BatchSize Value
+	Count     Value
+}
+
+type DeploymentProperties struct {
+	Mode                        Value
+	ParameterValues             map[string]Value
+	ExpressionEvaluationOptions *ExpressionEvaluationOptions
+	Deployment                  *Deployment
+}
+
+type ExpressionEvaluationOptions struct {
+	Scope Value
 }
 
 type PropertyBag struct {
@@ -92,6 +115,7 @@ func (d *Deployment) GetParameter(name string) interface{} {
 	if index >= 0 {
 		parameterName = name[:index]
 		propertyName = name[index:]
+		propertyName = strings.ReplaceAll(propertyName, "[", ".[")
 	}
 
 	for _, parameter := range d.Parameters {
@@ -101,7 +125,11 @@ func (d *Deployment) GetParameter(name string) interface{} {
 				return value
 			}
 			paramNode := dasel.New(value)
-			result, _ := paramNode.Query(propertyName)
+			result, err := paramNode.Query(propertyName)
+			if err != nil {
+				fmt.Printf("parse parameter %s failed, %v", name, err)
+				return nil
+			}
 			return result.InterfaceValue()
 		}
 	}
@@ -111,8 +139,20 @@ func (d *Deployment) GetParameter(name string) interface{} {
 
 func (d *Deployment) GetVariable(variableName string) interface{} {
 
+	resolver := resolver{
+		deployment: d,
+	}
+
 	for _, variable := range d.Variables {
 		if variable.Name == variableName {
+			if variable.Value.Kind == KindExpression {
+				value, err := resolver.resolveExpressionString(variable.Value.AsExpressionString(), types.NewTestMetadata())
+				if err != nil {
+					fmt.Printf("resolve expression %s failed, %v", variable.Value.AsExpressionString(), err)
+					return nil
+				}
+				return value.Raw()
+			}
 			return variable.Value.Raw()
 		}
 	}

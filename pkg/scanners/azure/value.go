@@ -213,7 +213,6 @@ func (v Value) AsString() string {
 }
 
 func (v Value) AsExpressionString() string {
-	v.Resolve()
 
 	if v.Kind != KindExpression {
 		return ""
