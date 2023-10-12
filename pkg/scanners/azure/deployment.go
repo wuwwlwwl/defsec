@@ -102,6 +102,21 @@ func (r *Resource) GetResourcesByType(t string) []Resource {
 	return resources
 }
 
+func (d *Deployment) SetParameter(name string, value interface{}) error {
+	for index, param := range d.Parameters {
+		if param.Variable.Name == name {
+			if v, ok := value.(Value); ok {
+				d.Parameters[index].Variable.Value = v
+			} else {
+				d.Parameters[index].Variable.Value = NewValue(value, param.Value.GetMetadata())
+			}
+
+			return nil
+		}
+	}
+	return fmt.Errorf("parameter %s not found in the deployment", name)
+}
+
 func (d *Deployment) GetParameter(name string) interface{} {
 
 	parameterName := name
