@@ -13,24 +13,24 @@ type expressionValue struct {
 }
 
 func (e expressionValue) Evaluate(deploymentProvider functions.DeploymentData) interface{} {
-	if f, ok := e.val.(expression); ok {
+	if f, ok := e.val.(Expression); ok {
 		return f.Evaluate(deploymentProvider)
 	}
 	return e.val
 }
 
-type expression struct {
-	name string
-	args []Node
+type Expression struct {
+	Name string
+	Args []Node
 }
 
-func (f expression) Evaluate(deploymentProvider functions.DeploymentData) interface{} {
-	args := make([]interface{}, len(f.args))
-	for i, arg := range f.args {
+func (f Expression) Evaluate(deploymentProvider functions.DeploymentData) interface{} {
+	args := make([]interface{}, len(f.Args))
+	for i, arg := range f.Args {
 		args[i] = arg.Evaluate(deploymentProvider)
 	}
 
-	return functions.Evaluate(deploymentProvider, f.name, args...)
+	return functions.Evaluate(deploymentProvider, f.Name, args...)
 }
 
 func NewExpressionTree(code string) (Node, error) {
@@ -47,8 +47,8 @@ func NewExpressionTree(code string) (Node, error) {
 }
 
 func newFunctionNode(tw *tokenWalker) Node {
-	funcNode := &expression{
-		name: tw.pop().Data.(string),
+	funcNode := &Expression{
+		Name: tw.pop().Data.(string),
 	}
 	tokenCloseParenCount := 0
 
@@ -60,7 +60,7 @@ func newFunctionNode(tw *tokenWalker) Node {
 
 		switch token.Type {
 		case TokenCloseParen:
-			if funcNode.name != "parameters" {
+			if funcNode.Name != "parameters" {
 				return funcNode
 			} else if tokenCloseParenCount == 1 {
 				tw.unPop()
@@ -68,22 +68,22 @@ func newFunctionNode(tw *tokenWalker) Node {
 			}
 			tokenCloseParenCount++
 		case TokenComma:
-			if funcNode.name == "parameters" {
+			if funcNode.Name == "parameters" {
 				return funcNode
 			}
 		case TokenName:
 			if tw.peek().Type == TokenOpenParen {
 				//  this is a function, unwind 1
 				tw.unPop()
-				funcNode.args = append(funcNode.args, newFunctionNode(tw))
-			} else if funcNode.name == "parameters" {
-				funcNode.args = append(funcNode.args, expressionValue{token.Data})
+				funcNode.Args = append(funcNode.Args, newFunctionNode(tw))
+			} else if funcNode.Name == "parameters" {
+				funcNode.Args = append(funcNode.Args, expressionValue{token.Data})
 			}
 		case TokenLiteralString, TokenLiteralInteger, TokenLiteralFloat:
-			funcNode.args = append(funcNode.args, expressionValue{token.Data})
+			funcNode.Args = append(funcNode.Args, expressionValue{token.Data})
 		case TokenDot, TokenOpenBracket, TokenCloseBracket:
-			if funcNode.name == "parameters" {
-				funcNode.args = append(funcNode.args, expressionValue{token.Data})
+			if funcNode.Name == "parameters" {
+				funcNode.Args = append(funcNode.Args, expressionValue{token.Data})
 			}
 		}
 
